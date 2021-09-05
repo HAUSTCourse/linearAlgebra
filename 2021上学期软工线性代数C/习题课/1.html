@@ -13094,8 +13094,8 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#65288;1&#65289;&#35299;&#65306;">&#65288;1&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;1&#65289;&#35299;&#65306;">&#182;</a></h3><p>注意到行列式各行(列)元素之和等于$x+(n-1)a$,有</p>
-<p>$D_{n} \xlongequal[i=2,3, \cdots, n]{c_1+c_i}\left|\begin{array}{cccc}x+(n-1) a &amp; a &amp; \cdots &amp; a \\ x+(n-1) a &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ x+(n-1) a &amp; a &amp; \cdots &amp; x\end{array}\right|=[x+(n-1) a]\left|\begin{array}{cccc}1 &amp; a &amp; \cdots &amp; a \\ 1 &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; a &amp; \cdots &amp; x\end{array}\right|$
-$\xlongequal[i=2,3, \cdots, n]{r_i-r_1}[x+(n-1) a]\left|\begin{array}{cccc}1 &amp; a &amp; \cdots &amp; a \\ 0 &amp; x-a &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; x-a\end{array}\right|$
+<p>$D_{n} \underset{i=2,3, \cdots, n}{\overset{c_1+c_i}{=}}\left|\begin{array}{cccc}x+(n-1) a &amp; a &amp; \cdots &amp; a \\ x+(n-1) a &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ x+(n-1) a &amp; a &amp; \cdots &amp; x\end{array}\right|=[x+(n-1) a]\left|\begin{array}{cccc}1 &amp; a &amp; \cdots &amp; a \\ 1 &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; a &amp; \cdots &amp; x\end{array}\right|$
+$\underset{i=2,3, \cdots, n}{\overset{r_i-r_1}{=}}[x+(n-1) a]\left|\begin{array}{cccc}1 &amp; a &amp; \cdots &amp; a \\ 0 &amp; x-a &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; x-a\end{array}\right|$
 $=[x+(n-1) a](x-a)^{n-1}$</p>
 
 </div>
@@ -13104,8 +13104,8 @@ $=[x+(n-1) a](x-a)^{n-1}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#65288;2&#65289;&#35299;&#65306;">&#65288;2&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;2&#65289;&#35299;&#65306;">&#182;</a></h3><p>$D_{n} \xlongequal[i=2,3, \cdots, n]{c_{1}+c_{i}}\left|\begin{array}{cccc}x+\sum_{i=1}^{n} a_{i} &amp; a_{2} &amp; \cdots &amp; a_{n} \\ x+\sum_{i=1}^{n} a_{i} &amp; x+a_{2} &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ x+\sum_{i=1}^{n} a_{i} &amp; a_{2} &amp; \cdots &amp; x+a_{n}\end{array}\right|=\left(x+\sum_{i=1}^{n} a_{i}\right)\left|\begin{array}{cccc}1 &amp; a_{2} &amp; \cdots &amp; a_{n} \\ 1 &amp; x+a_{2} &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; a_{2} &amp; \cdots &amp; x+a_{n}\end{array}\right|$
-$\underset{bm}{\overset{?}{=}}\xlongequal[i=2,3, \cdots, n]{r_i-r_1}\left(x+\sum_{i=1}^{n} a_{i}\right)\left|\begin{array}{cccc}1 &amp; a_{2} &amp; \cdots &amp; a_{n} \\ 0 &amp; x &amp; \cdots &amp; 0 \\ \ldots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp; x\end{array}\right|=\left(x+\sum_{i=1}^{n} a_{i}\right) x^{n-1}$</p>
+<h3 id="&#65288;2&#65289;&#35299;&#65306;">&#65288;2&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;2&#65289;&#35299;&#65306;">&#182;</a></h3><p>$D_{n} \underset{i=2,3, \cdots, n}{\overset{c_1+c_i}{=}}\left|\begin{array}{cccc}x+\sum_{i=1}^{n} a_{i} &amp; a_{2} &amp; \cdots &amp; a_{n} \\ x+\sum_{i=1}^{n} a_{i} &amp; x+a_{2} &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ x+\sum_{i=1}^{n} a_{i} &amp; a_{2} &amp; \cdots &amp; x+a_{n}\end{array}\right|=\left(x+\sum_{i=1}^{n} a_{i}\right)\left|\begin{array}{cccc}1 &amp; a_{2} &amp; \cdots &amp; a_{n} \\ 1 &amp; x+a_{2} &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; a_{2} &amp; \cdots &amp; x+a_{n}\end{array}\right|$
+$\underset{i=2,3, \cdots, n}{\overset{r_i-r_1}{=}}\left(x+\sum_{i=1}^{n} a_{i}\right)\left|\begin{array}{cccc}1 &amp; a_{2} &amp; \cdots &amp; a_{n} \\ 0 &amp; x &amp; \cdots &amp; 0 \\ \ldots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp; x\end{array}\right|=\left(x+\sum_{i=1}^{n} a_{i}\right) x^{n-1}$</p>
 
 </div>
 </div>
@@ -13113,13 +13113,13 @@ $\underset{bm}{\overset{?}{=}}\xlongequal[i=2,3, \cdots, n]{r_i-r_1}\left(x+\sum
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#65288;3&#65289;&#35299;&#65306;">&#65288;3&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;3&#65289;&#35299;&#65306;">&#182;</a></h3><p>$D_n\xlongequal[i=2,3, \cdots, n]{r_{i}-r_{1}}\left|\begin{array}{ccccc}
+<h3 id="&#65288;3&#65289;&#35299;&#65306;">&#65288;3&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;3&#65289;&#35299;&#65306;">&#182;</a></h3><p>$D_n\underset{i=2,3, \cdots, n}{\overset{r_{i}-r_{1}}{=}}\left|\begin{array}{ccccc}
 1+a_{1} &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
 -a_{1} &amp; a_{2} &amp; 0 &amp; \cdots &amp; 0 \\
 -a_{1} &amp; 0 &amp; a_{3} &amp; \cdots &amp; 0 \\
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
 -a_{1} &amp; 0 &amp; 0 &amp; \cdots &amp; a_{n}
-\end{array}\right|\xlongequal[i=2,3, \cdots, n]{c_{1}+\frac{a_1}{a_i}c_{i}}\left|\begin{array}{cccc}
+\end{array}\right|\underset{i=2,3, \cdots, n}{\overset{c_{1}+\frac{a_1}{a_i}c_{i}}{=}}\left|\begin{array}{cccc}
 1+a_{1}+\sum_{i=2}^{n} \frac{a_{1}}{a_{i}} &amp; 1 &amp; \cdots &amp; 1 \\
 0 &amp; a_{2} &amp; \cdots &amp; 0 \\
 \vdots &amp; \vdots &amp; &amp; \vdots \\
@@ -13141,7 +13141,7 @@ $\underset{bm}{\overset{?}{=}}\xlongequal[i=2,3, \cdots, n]{r_i-r_1}\left(x+\sum
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(1) 左边 $= abcdef \left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; 1 \\ 1 &amp; 1 &amp; -1\end{array}\right| \xlongequal[r_{3}+r_{1}]{r_{2}+r_{1}} a b c d e f\left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 2 \\ 0 &amp; 2 &amp; 0\end{array}\right|$</p>
+<p>(1) 左边 $= abcdef \left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; 1 \\ 1 &amp; 1 &amp; -1\end{array}\right| \underset{r_{3}+r_{1}}{\overset{r_{2}+r_{1}}{=}} a b c d e f\left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 2 \\ 0 &amp; 2 &amp; 0\end{array}\right|$</p>
 <p>$\stackrel{r_{2} \leftrightarrow r_{3}}{=}- abcdef \left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 2\end{array}\right|=4 a b c d e f=$ 右边</p>
 
 </div>
@@ -13158,12 +13158,12 @@ $\underset{bm}{\overset{?}{=}}\xlongequal[i=2,3, \cdots, n]{r_i-r_1}\left(x+\sum
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>(2) 左边$\xlongequal[i=2,3,4]{c_i-c_1}\left|\begin{array}{cccc}
+<p>(2) 左边$\underset{i=2,3,4}{\overset{c_i-c_1}{=}}\left|\begin{array}{cccc}
 a^{2} &amp; 2 a+1 &amp; 4 a+4 &amp; 6 a+9 \\
 b^{2} &amp; 2 b+1 &amp; 4 b+4 &amp; 6 b+9 \\
 c^{2} &amp; 2 c+1 &amp; 4 c+4 &amp; 6 c+9 \\
 d^{2} &amp; 2 d+1 &amp; 4 d+4 &amp; 6 d+9
-\end{array}\right|\xlongequal[c_4-3c_2]{c_3-2c_2}\left|\begin{array}{llll}
+\end{array}\right|\underset{c_4-3c_2}{\overset{c_3-2c_2}{=}}\left|\begin{array}{llll}
 a^{2} &amp; 2 a+1 &amp; 2 &amp; 6 \\
 b^{2} &amp; 2 b+1 &amp; 2 &amp; 6 \\
 c^{2} &amp; 2 c+1 &amp; 2 &amp; 6 \\
@@ -13176,7 +13176,7 @@ d^{2} &amp; 2 d+1 &amp; 2 &amp; 6
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#35745;&#31639;&#34892;&#21015;&#24335;">&#35745;&#31639;&#34892;&#21015;&#24335;<a class="anchor-link" href="#&#35745;&#31639;&#34892;&#21015;&#24335;">&#182;</a></h3><p>$D=\left|\begin{array}{cccc}
+<h3 id="&#20363;&#39064;-&#35745;&#31639;&#34892;&#21015;&#24335;">&#20363;&#39064; &#35745;&#31639;&#34892;&#21015;&#24335;<a class="anchor-link" href="#&#20363;&#39064;-&#35745;&#31639;&#34892;&#21015;&#24335;">&#182;</a></h3><p>$D=\left|\begin{array}{cccc}
 1 &amp; 2 &amp; 0 &amp; 0 \\
 3 &amp; 4 &amp; 0 &amp; 0 \\
 0 &amp; 0 &amp; -1 &amp; 3 \\
@@ -13215,7 +13215,7 @@ D &amp;=1 \times\left|\begin{array}{rrr}
 \end{array}\right| \times\left|\begin{array}{ll}
 -1 &amp; 3 \\
 5 &amp; 1
-\end{array}\right|=32\end{aligned}$$</p>
+\end{array}\right|=32\end{aligned}$</p>
 
 </div>
 </div>
