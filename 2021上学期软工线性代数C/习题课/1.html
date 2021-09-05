@@ -13077,36 +13077,148 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-$$
-D=\left|\begin{array}{ccccccc}
-e_{11} &amp; &amp; &amp; &amp; &amp; &amp; \\
-\vdots &amp; \ddots &amp; &amp; &amp; &amp; &amp; \\
-e_{s 1} &amp; \cdots &amp; e_{s} &amp; &amp; &amp; &amp; \\
-c_{11} &amp; \cdots &amp; c_{1 s} &amp; d_{11} &amp; &amp; &amp; \\
-c_{21} &amp; \cdots &amp; c_{2 s} &amp; d_{21} &amp; d_{22} &amp; &amp; \\
-\vdots &amp; &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \\
-c_{r 1} &amp; \cdots &amp; c_{r s} &amp; d_{r 1} &amp; d_{r 2} &amp; \cdots &amp; d_{r r}
-\end{array}\right|=e_{11} \cdots e_{x} d_{11} d_{22} \cdots d_{r}=D_{1} D_{2}
-$$
+<h1 id="&#20064;&#39064;&#35838;&#19968;">&#20064;&#39064;&#35838;&#19968;<a class="anchor-link" href="#&#20064;&#39064;&#35838;&#19968;">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[0]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 查看工作区文件, 该目录下的变更将会持久保存. 请及时清理不必要的文件, 避免加载过慢.</span>
-<span class="c1"># View personal work directory. </span>
-<span class="c1"># All changes under this directory will be kept even after reset. </span>
-<span class="c1"># Please clean unnecessary files in time to speed up environment loading. </span>
-<span class="o">!</span>ls /home/aistudio/work
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20363;&#39064;--&#35745;&#31639;n&#38454;&#34892;&#21015;&#24335;">&#20363;&#39064;  &#35745;&#31639;n&#38454;&#34892;&#21015;&#24335;<a class="anchor-link" href="#&#20363;&#39064;--&#35745;&#31639;n&#38454;&#34892;&#21015;&#24335;">&#182;</a></h2><p>(1) $D_{n}=\left|\begin{array}{cccc}x &amp; a &amp; \cdots &amp; a \\ a &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ a &amp; a &amp; \cdots &amp; x\end{array}\right|$ (2) $D_{n}=\left|\begin{array}{cccc}a_{1}+x &amp; a_{2} &amp; \cdots &amp; a_{n} \\ a_{1} &amp; a_{2}+x &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ a_{1} &amp; a_{2} &amp; \cdots &amp; a_{n}+x\end{array}\right|$
+(3) $D_{n}=\left|\begin{array}{cccc}1+a_{1} &amp; 1 &amp; \cdots &amp; 1 \\ 1 &amp; 1+a_{2} &amp; \cdots &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; 1 &amp; \cdots &amp; 1+a_{n}\end{array}\right|\left(a_{i} \neq 0, i=1,2, \cdots, n\right)$</p>
 
-    </div>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#65288;1&#65289;&#35299;&#65306;">&#65288;1&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;1&#65289;&#35299;&#65306;">&#182;</a></h3><p>注意到行列式各行(列)元素之和等于$x+(n-1)a$,有</p>
+<p>$D_{n} \xlongequal[i=2,3, \cdots, n]{c_1+c_i}\left|\begin{array}{cccc}x+(n-1) a &amp; a &amp; \cdots &amp; a \\ x+(n-1) a &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ x+(n-1) a &amp; a &amp; \cdots &amp; x\end{array}\right|=[x+(n-1) a]\left|\begin{array}{cccc}1 &amp; a &amp; \cdots &amp; a \\ 1 &amp; x &amp; \cdots &amp; a \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; a &amp; \cdots &amp; x\end{array}\right|$
+$\xlongequal[i=2,3, \cdots, n]{r_i-r_1}[x+(n-1) a]\left|\begin{array}{cccc}1 &amp; a &amp; \cdots &amp; a \\ 0 &amp; x-a &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; x-a\end{array}\right|$
+$=[x+(n-1) a](x-a)^{n-1}$</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#65288;2&#65289;&#35299;&#65306;">&#65288;2&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;2&#65289;&#35299;&#65306;">&#182;</a></h3><p>$D_{n} \xlongequal[i=2,3, \cdots, n]{c_{1}+c_{i}}\left|\begin{array}{cccc}x+\sum_{i=1}^{n} a_{i} &amp; a_{2} &amp; \cdots &amp; a_{n} \\ x+\sum_{i=1}^{n} a_{i} &amp; x+a_{2} &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ x+\sum_{i=1}^{n} a_{i} &amp; a_{2} &amp; \cdots &amp; x+a_{n}\end{array}\right|=\left(x+\sum_{i=1}^{n} a_{i}\right)\left|\begin{array}{cccc}1 &amp; a_{2} &amp; \cdots &amp; a_{n} \\ 1 &amp; x+a_{2} &amp; \cdots &amp; a_{n} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; a_{2} &amp; \cdots &amp; x+a_{n}\end{array}\right|$
+$\xlongequal[i=2,3, \cdots, n]{r_i-r_1}\left(x+\sum_{i=1}^{n} a_{i}\right)\left|\begin{array}{cccc}1 &amp; a_{2} &amp; \cdots &amp; a_{n} \\ 0 &amp; x &amp; \cdots &amp; 0 \\ \ldots &amp; \cdots &amp; \cdots &amp; \cdots \\ 0 &amp; 0 &amp; \cdots &amp; x\end{array}\right|=\left(x+\sum_{i=1}^{n} a_{i}\right) x^{n-1}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#65288;3&#65289;&#35299;&#65306;">&#65288;3&#65289;&#35299;&#65306;<a class="anchor-link" href="#&#65288;3&#65289;&#35299;&#65306;">&#182;</a></h3><p>$D_n\xlongequal[i=2,3, \cdots, n]{r_{i}-r_{1}}\left|\begin{array}{ccccc}
+1+a_{1} &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\
+-a_{1} &amp; a_{2} &amp; 0 &amp; \cdots &amp; 0 \\
+-a_{1} &amp; 0 &amp; a_{3} &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+-a_{1} &amp; 0 &amp; 0 &amp; \cdots &amp; a_{n}
+\end{array}\right|\xlongequal[i=2,3, \cdots, n]{c_{1}+\frac{a_1}{a_i}c_{i}}\left|\begin{array}{cccc}
+1+a_{1}+\sum_{i=2}^{n} \frac{a_{1}}{a_{i}} &amp; 1 &amp; \cdots &amp; 1 \\
+0 &amp; a_{2} &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; a_{n}
+\end{array}\right|$</p>
+<p>$=\left(1+a_{1}+\sum_{i=2}^{n} \frac{a_{1}}{a_{i}}\right) a_{2} \cdots a_{n}=a_{1} a_{2} \cdots a_{n}\left(1+\sum_{i=1}^{n} \frac{1}{a_{i}}\right)$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20363;&#39064;--&#35777;&#26126;&#65306;">&#20363;&#39064;  &#35777;&#26126;&#65306;<a class="anchor-link" href="#&#20363;&#39064;--&#35777;&#26126;&#65306;">&#182;</a></h2><p>(1) $\left|\begin{array}{ccc}-a b &amp; a c &amp; a e \\ b d &amp; -c d &amp; d e \\ b f &amp; c f &amp; -e f\end{array}\right|=4 a b c d e f$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(1) 左边 $= abcdef \left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; 1 \\ 1 &amp; 1 &amp; -1\end{array}\right| \xlongequal[r_{3}+r_{1}]{r_{2}+r_{1}} a b c d e f\left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 2 \\ 0 &amp; 2 &amp; 0\end{array}\right|$</p>
+<p>$\stackrel{r_{2} \leftrightarrow r_{3}}{=}- abcdef \left|\begin{array}{ccc}-1 &amp; 1 &amp; 1 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 2\end{array}\right|=4 a b c d e f=$ 右边</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(2) $\left|\begin{array}{llll}a^{2} &amp; (a+1)^{2} &amp; (a+2)^{2} &amp; (a+3)^{2} \\ b^{2} &amp; (b+1)^{2} &amp; (b+2)^{2} &amp; (b+3)^{2} \\ c^{2} &amp; (c+1)^{2} &amp; (c+2)^{2} &amp; (c+3)^{2} \\ d^{2} &amp; (d+1)^{2} &amp; (d+2)^{2} &amp; (d+3)^{2}\end{array}\right|=0$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(2) 左边$\xlongequal[i=2,3,4]{c_i-c_1}\left|\begin{array}{cccc}
+a^{2} &amp; 2 a+1 &amp; 4 a+4 &amp; 6 a+9 \\
+b^{2} &amp; 2 b+1 &amp; 4 b+4 &amp; 6 b+9 \\
+c^{2} &amp; 2 c+1 &amp; 4 c+4 &amp; 6 c+9 \\
+d^{2} &amp; 2 d+1 &amp; 4 d+4 &amp; 6 d+9
+\end{array}\right|\xlongequal[c_4-3c_2]{c_3-2c_2}\left|\begin{array}{llll}
+a^{2} &amp; 2 a+1 &amp; 2 &amp; 6 \\
+b^{2} &amp; 2 b+1 &amp; 2 &amp; 6 \\
+c^{2} &amp; 2 c+1 &amp; 2 &amp; 6 \\
+d^{2} &amp; 2 d+1 &amp; 2 &amp; 6
+\end{array}\right|=0$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#35745;&#31639;&#34892;&#21015;&#24335;">&#35745;&#31639;&#34892;&#21015;&#24335;<a class="anchor-link" href="#&#35745;&#31639;&#34892;&#21015;&#24335;">&#182;</a></h3><p>$D=\left|\begin{array}{cccc}
+1 &amp; 2 &amp; 0 &amp; 0 \\
+3 &amp; 4 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 3 \\
+0 &amp; 0 &amp; 5 &amp; 1
+\end{array}\right|$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\begin{aligned}
+D &amp;=1 \times\left|\begin{array}{rrr}
+4 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 3 \\
+0 &amp; 5 &amp; 1
+\end{array}\right|-3\left|\begin{array}{rrr}
+2 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 3 \\
+0 &amp; 5 &amp; 1
+\end{array}\right| \\
+&amp;=1 \times 4\left|\begin{array}{ll}
+-1 &amp; 3 \\
+5 &amp; 1
+\end{array}\right|-3 \times 2\left|\begin{array}{ll}
+-1 &amp; 3 \\
+5 &amp; 1
+\end{array}\right|\\
+&amp;=(1 \times 4-3 \times 2)\left|\begin{array}{ll}
+-1 &amp; 3 \\
+5 &amp; 1
+\end{array}\right|=\left|\begin{array}{ll}
+1 &amp; 2 \\
+3 &amp; 4
+\end{array}\right| \times\left|\begin{array}{ll}
+-1 &amp; 3 \\
+5 &amp; 1
+\end{array}\right|=32\end{aligned}$$</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
